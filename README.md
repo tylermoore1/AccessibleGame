@@ -6,4 +6,4 @@ Instructions: Click the space bar to change the direction of the arrow you want 
 
 Here is a video link of Josh explaining the game a little more: https://vimeo.com/333377969
 
-Here is the link if you would like to try out the game yourself: 
+Here is the link if you would like to try out the game yourself: https://tylermoore1.github.io/AccessibleGame/
