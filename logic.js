@@ -603,64 +603,62 @@ function moveDown() {
   return numberOfTiles;
 }
 
-// $('#idBody').on('click', 'div.number', function() {
+
+//******************************************this function is to play the game the normal way with the four arrow keys ************//
+// $(document).keydown(function(e) {
+//   var numberOfTilesMoved = 0;
+//     switch(e.which) {
+//         case 37: // left
+//           numberOfTilesMoved = moveLeft();
+//           //alert (numberOfTilesMoved);
+//           break;
 //
+//         case 38: // up
+//           numberOfTilesMoved = moveUp();
+//           break;
+//
+//         case 39: // right
+//           numberOfTilesMoved = moveRight();
+//           break;
+//
+//         case 40: // down
+//           numberOfTilesMoved = moveDown();
+//           break;
+//
+//         default: return; // exit this handler for other keys
+//     }
+//     e.preventDefault(); // prevent the default action (scroll / move caret)
+//
+//     updateGrid();
+//
+//     setTimeout(function() {
+//       if (numberOfTilesMoved > 0) {
+//         addNewNumber();
+//         updateGrid();
+//       }
+//     }, 100);
+//
+//     //setTimeout(updateGrid, 110);
+//
+//     setTimeout(function() {
+//       counter = isGameOver();
+//       if (counter >= 16) {
+//         var highestTile = 0;
+//         for (var num = 0; num < 16; num++) {
+//           var j = Math.floor(num / 4);
+//           var i = num % 4;
+//
+//           if (tiles[j][i] > highestTile) {
+//             highestTile = tiles[j][i];
+//           }
+//         }
+//         $.alert({
+//           title: 'Game Over',
+//           content: 'The highest number you got to was ' + highestTile,
+//         });
+//       }
+//     }, 600);
 // });
-
-$(document).keydown(function(e) {
-  var numberOfTilesMoved = 0;
-    switch(e.which) {
-        case 37: // left
-          numberOfTilesMoved = moveLeft();
-          //alert (numberOfTilesMoved);
-          break;
-
-        case 38: // up
-          numberOfTilesMoved = moveUp();
-          break;
-
-        case 39: // right
-          numberOfTilesMoved = moveRight();
-          break;
-
-        case 40: // down
-          numberOfTilesMoved = moveDown();
-          break;
-
-        default: return; // exit this handler for other keys
-    }
-    e.preventDefault(); // prevent the default action (scroll / move caret)
-
-    updateGrid();
-
-    setTimeout(function() {
-      if (numberOfTilesMoved > 0) {
-        addNewNumber();
-        updateGrid();
-      }
-    }, 100);
-
-    //setTimeout(updateGrid, 110);
-
-    setTimeout(function() {
-      counter = isGameOver();
-      if (counter >= 16) {
-        var highestTile = 0;
-        for (var num = 0; num < 16; num++) {
-          var j = Math.floor(num / 4);
-          var i = num % 4;
-
-          if (tiles[j][i] > highestTile) {
-            highestTile = tiles[j][i];
-          }
-        }
-        $.alert({
-          title: 'Game Over',
-          content: 'The highest number you got to was ' + highestTile,
-        });
-      }
-    }, 600);
-});
 
 var keyPressed = false;
 var counter = 1;
